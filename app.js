@@ -48,12 +48,6 @@ function render(req, res, file) {
 }
 
 var server = http.createServer(function (req, res) {
-});
-
-
-server.listen(port);
-
-server.on("request", function (req, res) {
 	if (req.headers.accept.indexOf("json") > -1) {
         console.log("yes");
     }
@@ -79,3 +73,6 @@ server.on("request", function (req, res) {
     }
     errorHandle(req, res);
 });
+
+
+server.listen(port);
