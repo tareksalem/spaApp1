@@ -15,6 +15,7 @@ function Router() {
         this.routes.forEach(function (route) {
             if (getRoute == route) {
                 window.addEventListener("hashchange", function (event) {
+                    window.scrollTo(0, 0);
                     if (location.hash == getRoute) {
                         return res();
                     }
